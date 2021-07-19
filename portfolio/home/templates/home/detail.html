@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <img src="{{ item.item_image }}" alt="" class="img-fluid" style="height:200; object-fit:cover;">
+        </div>
+        <div class="col-md-5">
+            <h1>{{object.item_name}}</h2>
+            <h2>{{object.item_desc}}</h2>
+            <h3>{{object.item_price}}</h3>
+            <a href="{% url 'home:delete_item' item.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
